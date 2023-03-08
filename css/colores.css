@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(75, 88, 97);
+}
+
+.color-style {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.colores-box {
+    display: flex;
+    flex-direction: row;
+}
+.span {
+    color: white;
+    font-size: 1.6em;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.color1{
+    
+    background-color: darkblue;
+}
+
+.color2{
+    
+background-color: goldenrod;
+}
+
+.color3{
+
+    background-color: dodgerblue;
+}
+
+.color4{
+
+    background-color:rgb(255, 140, 0);
+}
+
+.color5{
+
+    background-color:rgb(102, 205, 170);
+}
+
+.color6{
+
+    background-color:rgb(188, 143, 143);
+}
+
+.color7{
+
+    background-color:#ADFF2F;
+}
+
+.color8{
+
+    background-color:#7FFFD4;
+}
+
+.color9{
+
+    background-color:#A52A2A;
+}
+
+@font-face {
+    font-family: wedding;
+    src: url(../fonts/waltograph42.otf);
+}
+.colores0-1 {
+    font-family: wedding;
+}
+
+.colores0-2 {
+    font-family: wedding;
+}
+
+.colores0-3 {
+    font-family: wedding;
+}
