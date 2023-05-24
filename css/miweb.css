@@ -92,6 +92,6 @@ background: linear-gradient(transparent, #f00);
     }
     100%
     {
-        transform: translateY(calc(160vh + 200px));
+        transform: translateY(calc(100vh + 200px)); /* cambio */
     }
 }
