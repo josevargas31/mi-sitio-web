@@ -1,41 +1,60 @@
 * {
     margin: 0;
-    border: 0;
-    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
-.bar-menu {
-    cursor: pointer;
-    position: fixed;
-    color: white;
-    font-size: 2.2em;
-    top: 15px;
-    right: 30px;
-    visibility: hidden;
-}
-.main-nav {
-    position: fixed;
-    top: 0 ;
-    left: 0;
+nav {
+    background-color: rgb(48,48,48,.8);
+    font-size: 1.3rem;
     width: 100%;
-    background-color: rgba(212, 210, 210, 0.9);
-    height: 80px;
 }
-.main-menu {
-    list-style: none;  
-    text-align: right; 
+nav ul {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    background-color: rgb(48,48,48,.8);
+    left: 0;
 }
-.item-menu {
-    display: block;
-    color: rgb(10, 10, 10);
-    text-decoration: none;
-    font-size: 1.5em;
+/* Primer menu */
+.first-item {
+margin-left: 50px;
 }
-.item-main-menu {
-    height: 80px;
+nav > ul > li {
     display: inline-block;
-    padding: 30px 45px;   
+    width: 250px;
+    line-height: 70px;
+    text-align: center;
 }
-.item-main-menu:hover {
+nav >ul > li:hover {
+    background-color: rgb(51, 122, 0);
     cursor: pointer;
-    background-color: rgba(71, 68, 68,.9);
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+ul  li {
+    position: relative;
+}
+/* Segundo nivel */
+nav li li { /* Visualizamos el menu */
+    max-height: 0;
+    overflow: hidden; 
+}
+nav li:hover > ul > li {
+max-height: 500px;
+overflow: visible;
+text-align: center;
+border-bottom: 1px solid rgb(245,245,245.6);
+border-right: 1px solid rgb(245,245,245.6);
+}
+nav li > ul > li:hover {
+    background-color: rgb(51, 122, 0);
+    cursor: pointer;
+}
+/* Tercer nivel */
+nav ul ul ul {
+    left: 100%;
+    top: 0;
 }
