@@ -25,7 +25,7 @@ body {
 button:hover {
     border-radius: 8px;
     border: 8px double rgb(105, 105, 105);
-    box-shadow: 0 0 10px rgb(244, 164, 96), 0 0 15px rgb(220, 220, 220), 0 0 20px rgb(160, 82, 45);
+    box-shadow: 0 0 10px rgb(255, 255, 255), 0 0 15px rgb(220, 220, 220), 0 0 20px rgb(105, 105, 105);
 }
 .lista { /* Para centar el boton */
     font-size: 1.6em;
@@ -60,38 +60,54 @@ h2 {
      display: flex;
    justify-content: center;
 }
-i {
+
+
+/* Decoracion de la lluvia de mi pagina web */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.fondo {
+    background-image: url(../img/paisaje.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-y: bottom;  
+}
+
+.container {
     position: absolute;
-    height: 200px; 
-    background: linear-gradient(transparent, #fff);
-    border-bottom-left-radius: 5px;
-    border-top-right-radius: 5px;
-    animation: animate 3s linear infinite ;
+    width: 100%;
+    /* height: 100%; */
+    /* animation: vapour 2s linear infinite;  */
 }
-i:nth-child(3n+1)
-{
-background: linear-gradient(transparent, #0ff);
-}
-i:nth-child(3n+2)
-{
-background: linear-gradient(transparent, #0ff);
-}
-i:nth-child(3n+3)
-{
-background: linear-gradient(transparent, #0f0);
-}
-i:nth-child(3n+4)
-{
-background: linear-gradient(transparent, #f00);
-}
-@keyframes animate 
-{
-    0%
-    {
-        transform: translateY(-200px);
+
+/* @keyframes vapour {
+    0%, 100% {
+        backdrop-filter: blur(0);
     }
-    100%
-    {
-        transform: translateY(calc(100vh + 200px)); /* cambio */
+    50% {
+        backdrop-filter: blur(2px);
+    }
+} */
+
+.container i {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    top: -10px;
+    background: #d3d3d3;
+    animation: rain linear infinite;
+}
+
+@keyframes rain {
+    0% {
+        top: -10px;
+    }
+    100% {
+        top: 255vh;
     }
 }

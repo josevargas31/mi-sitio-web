@@ -6,34 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi sitio web</title>
     <link rel="stylesheet" href="css/miweb.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script>
-        function rain(){
-    let amount = 33;
-    let body = document.querySelector('body');
-    let i = 0;
-    while (i < amount){
-        let drop = document.createElement('i');
+  
 
-        let size = Math.random() * 5;
-        let posX = Math.floor(Math.random() * window.innerWidth);
-        let delay = Math.random() * -20;
-        let duration = Math.random() * 5;
+    <body class="fondo"></body>
+    <section class="container"></section>
 
 
-
-        drop.style.width = 0.2 + size+'px'
-        drop.style.left = posX + 'px';
-        drop.style.animationDelay = delay+'s';
-        drop.style.animationDuration = 1 + duration+'s';
-        body.appendChild(drop);
-        i++
-    }
-}
-rain();
-    </script>
-    
     <h1>Bienvenidos a mi sitio web</h1>
     <h2>Autor: Jose</h2>
     
@@ -93,7 +76,7 @@ rain();
 
 
 
-
+<script src="js/miweb.js"></script>
 
 </body>
 </html>
