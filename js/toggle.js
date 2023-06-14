@@ -2,7 +2,7 @@
 let choiceBox = document.getElementById("choiceBox"); /* Circulo */
 let toggleBox = document.getElementById("toggleBox"); /* Rectangulo */
 /* Verificamos que la clase se encuentra en choice-box */
-choiceBox.addEventListener("click", function(){
+toggleBox.addEventListener("click", function(){
   if (choiceBox.classList.contains("choiceBox")) {
     choiceBox.classList.add("choice-box-on")
     choiceBox.classList.remove("choiceBox")
