@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav {
+    background-color: rgb(48,48,48,.8);
+    font-size: 1.3rem;
+    width: 100%;
+}
+nav ul {
+    width: 100%;
+    text-align: left;
+    list-style: none;
+    position: absolute;
+    background-color: rgb(48,48,48,.8);
+    left: 0;
+}
+/* Primer menu */
+.first-item {
+margin-left: 50px;
+}
+nav > ul > li {
+    display: inline-block;
+    width: 250px;
+    line-height: 70px;
+    text-align: center;
+}
+nav >ul > li:hover {
+    background-color: rgb(51, 122, 0);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+ul  li {
+    position: relative;
+}
+/* Segundo nivel */
+nav li li { /* Visualizamos el menu */
+    max-height: 0;
+    overflow: hidden; 
+}
+nav li:hover > ul > li {
+max-height: 500px;
+overflow: visible;
+text-align: center;
+border-bottom: 1px solid rgb(245,245,245.6);
+border-right: 1px solid rgb(245,245,245.6);
+}
+nav li > ul > li:hover {
+    background-color: rgb(51, 122, 0);
+    cursor: pointer;
+}
+/* Tercer nivel */
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+/* https://sharit-vargas07.github.io/Mi-sitio-web/mediaquery.html */
