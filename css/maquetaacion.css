@@ -21,11 +21,13 @@ header {
 }
 .logo {
     grid-area: logo;
-    background-color: goldenrod ;
+    background-color: goldenrod;
+    border-radius: 20px;
 }
 .main-menu {
     grid-area: main-menu;
     background-color: rgb(40, 167, 69);
+    border-radius: 20px;
 }
 .style-text {
     font-family: Verdana,sans-serif;
@@ -47,6 +49,7 @@ header {
 .main-img {
     grid-area: main-img;
     background-color: darkcyan;
+    border-radius: 20px;
 }
 .article-1 {
     grid-area: article-1;
@@ -70,7 +73,9 @@ header {
 }
 .img-article{
     height: 350px;
+    border-radius: 10%;
     background-color: rgb(64,64,64,.8);
+
 }
 .style-text-article {
     margin-top: 30px;
