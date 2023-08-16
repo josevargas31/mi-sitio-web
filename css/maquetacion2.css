@@ -7,9 +7,11 @@
 .logo {
     border-radius: 10px;
     grid-area: logo;
-    background-color: goldenrod;
+/*     background-color: goldenrod; */
     /*  width: 150px; */
     height: 120px;
+    background-image: url(../img/logolego_151x114.png);
+    background-repeat: no-repeat;
 }
 
 .main-menu {
@@ -69,6 +71,8 @@ span {
     grid-area: main-img;
     background-color: darkcyan;
     height: 600px;
+    background-image: url(../img/lego_1500x802.png);
+    background-repeat: no-repeat;
 }
 
 .style-text {
