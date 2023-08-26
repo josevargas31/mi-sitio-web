@@ -155,7 +155,7 @@ span { /* Para la letra de los contenedores */
 }
 @media only screen and (max-width:730px) {
     .main-img {
-        background-image: url(../img/lego_1500x802.png);
+        background-image: url(../img/Sin\ título.png);
         background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
         background-repeat: no-repeat; /* para que no se repita la imagen */
         background-position: center; /* centra la imagen en el contendor div */
@@ -254,7 +254,7 @@ span { /* Para la letra de los contenedores */
 .nuew-3 {
     margin-top: 10px;
     grid-area: nuew-3;
-    background-image: url(../img/lamborghininegro_474x266.png);
+    background-image: url(../img/imgArticleSeis500x281.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
@@ -287,7 +287,7 @@ span { /* Para la letra de los contenedores */
 
     .main-content {
         display: grid;
-        grid-template: "main-img "300px
+        grid-template: "main-img "
             "article-1 " auto
             "text-article-1 " auto
             "article-2" auto
