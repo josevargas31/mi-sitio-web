@@ -164,7 +164,7 @@ span { /* Para la letra de los contenedores */
         height: 700px;
         display: flex; 
         position: relative;
-        z-index: 2;     
+        z-index: 2;    
     }
 }
 /* ////////////////////////////////////////////////////////////////////////////// */
@@ -183,12 +183,10 @@ span { /* Para la letra de los contenedores */
     border-radius: 10px;
     grid-area: article-1;
     background-color: rgb(64, 64, 64, .7);
-    background-image: url(../img/lamborghininegro_474x266.png);
+    background-image: url(../img/imgArticleUno500x281.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
-    /* min-width: 200px;
-    min-height: 150px; */
 }
 
 .style-img {
@@ -204,7 +202,7 @@ span { /* Para la letra de los contenedores */
     border-radius: 10px;
     grid-area: article-2;
     background-color: rgb(64, 64, 64, .7);
-    background-image: url(../img/lamborghininegro_474x266.png);
+    background-image: url(../img/imgArticleDos500x281.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
@@ -214,7 +212,7 @@ span { /* Para la letra de los contenedores */
     border-radius: 10px;
     grid-area: article-3;
     background-color: rgb(64, 64, 64, .7);
-    background-image: url(../img/lamborghininegro_474x266.png);
+    background-image: url(../img/imgArticleTres500x266.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
@@ -238,7 +236,7 @@ span { /* Para la letra de los contenedores */
 .nuew-1 {
     margin-top: 10px;
     grid-area: nuew-1;
-    background-image: url(../img/lamborghininegro_474x266.png);
+    background-image: url(../img/imgArticleCuatro500x281.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
@@ -247,7 +245,7 @@ span { /* Para la letra de los contenedores */
 .nuew-2 {
     margin-top: 10px;
     grid-area: nuew-2;
-    background-image: url(../img/lamborghininegro_474x266.png);
+    background-image: url(../img/imgArticleCinco500x281.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
