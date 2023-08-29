@@ -9,7 +9,7 @@
     grid-area: main-page;
 }
 body {
-    background-color: #f5f6f7;
+    background-color: #000000;
     width: 100%;
     height: 100vh;
     display: grid;
@@ -22,6 +22,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 10px;
+    color: white;
 }
 .main-content { /* sirve para volver mi contenedor en una cuadricula */
     gap: 70px; /* el espacio entre contenedores */
