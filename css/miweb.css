@@ -316,7 +316,7 @@ body {
     grid-area: article-20;
     border-radius: 10px;
     background-color: rgb(64, 64, 64, .7);
-    background-image: url(../img);
+    background-image: url(../img/legoBarco_400x750.png);
     background-size: cover; /* la imagen se ajusta para cubrir completamente el div */
     background-repeat: no-repeat; /* para que no se repita la imagen */
     background-position: center; /* centra la imagen en el contendor div */
