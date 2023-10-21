@@ -10,7 +10,7 @@ header {
     height: 60px;
     display: grid;
     grid-template: "header-logo header-enviar-a box-header-search-input header-flag-country header-identificate header-devoluciones header-carrito" 60px /
-                    150px       110px           1fr                     70px                160px               120px               140px;     
+                    150px       110px           1fr                     100px                160px               100px               140px;     
 }
 .header-logo {
     grid-area: header-logo;
@@ -133,6 +133,27 @@ header {
     grid-area: header-carrito;
 }
 /*  */
+.header-search-input-focus {
+height: 46px;
+width: 100%;
+display: grid;
+grid-template: "box-filtro-todos box-buscar-amazon box-lupa" / 
+                70px             1fr                50px;
+border: 3px solid rgb(231, 153, 50);
+border-radius: 12px;
+}
+
+.header-search-input-no-focus {
+    height: 46px;
+    width: 100%;
+    display: grid;
+    grid-template: "box-filtro-todos box-buscar-amazon box-lupa" / 
+                    70px             1fr                50px;
+    border: 3px solid transparent;
+    border-radius: 12px;                 
+ }
+
+/*  */
 .header-country-flag {
     color: white;
     display: flex;
@@ -145,7 +166,7 @@ header {
 }
 .header-carrito {
     color: white;
-    font-weight: 600;
+    font-weight: 300;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,23 +175,32 @@ header {
 .fa-solid.fa-chevron-down.fa-beat {
     font-size: 10px;
 }
-.txt-hola-identificate, .txt-devoluciones {
+.txt-hola-identificate, .txt-devoluciones  {
     color: white;
     font-size: .8em;
     font-weight: 400;
+    position: relative;
+    top: 10px;
 }
 .txt-cuentas-listas, .txt-pedidos {
     color: white;
     font-size: 1em;
     font-weight: 500;
+    position: relative;
+    top: 10px;
+
 }
 .txt-Es {
     color: white;
     font-size: .8em;
+    padding: 5px;
 }
 .carrito {
     font-size: 1.5em;
+    position: relative;
+    right: 5px;
 }
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 
 
