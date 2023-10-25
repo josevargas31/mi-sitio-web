@@ -98,6 +98,7 @@ header {
 .input-busqueda {
     border:none;
     height: 40px;
+    width: 100%;
     padding-left: 10px;
     font-size: 1.1em;
 }
