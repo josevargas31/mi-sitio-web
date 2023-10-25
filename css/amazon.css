@@ -107,7 +107,7 @@ header {
     font-weight: 500;
 }
 .box-lupa {
-    height: 40px;
+    height: 42px;
     background-color: rgb(254,189,105);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -203,8 +203,73 @@ border-radius: 12px;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.main-content {
+    height: 100vh;
+    position: static;
+    z-index: 10;
+}
 
+.box-modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgb(0, 0, 0,.5);
+z-index: 10;
+}
 
+.modal {
+   width: 90%;
+   height: 90%;
+   z-index: 20; 
+   background-color: white;
+   border-radius: 10px;
+   position: relative;
+   display: grid;
+   grid-template: "box-main-img-modal info-modal"  /
+                    1fr                350px;
+}
+.box-main-img-modal {
+    grid-area: box-main-img-modal;
+    width: 100%;
+    background-color: aqua;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-img-modal {
+    width: 90%;
+    height: auto;
+}
+.info-modal {
+    grid-area: info-modal;
+    padding: 30px 60px 30px 30px;
+    
+}
+.btn-close {
+position: absolute;
+top: 5px;
+right: 10px;
+font-size: 1.3em;
+border: 3px solid rgb(44,176,224,0.3);
+border-radius: 6px;
+padding: 0 3px;
+}
+.txt-caracteristicas-modal {
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1em;
+}
+.txt-estilos-caracteristicas {
+    color: rgb(96, 96, 96);
+    font-size: .9em;
+    padding-top: 20px;
+}
 /* Fonts */
 /* poppins-200 - latin */
 @font-face {

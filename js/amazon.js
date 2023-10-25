@@ -1,4 +1,4 @@
-let headerSearchInput = document.getElementById("");
+let headerSearchInput = document.getElementById("headerSearchInput");
 
 let mainContent = document.getElementById("main-content");
 
