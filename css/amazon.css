@@ -224,7 +224,7 @@ z-index: 10;
 
 .modal {
    width: 90%;
-   height: 90%;
+   height: 80%;
    z-index: 20; 
    background-color: white;
    border-radius: 10px;
@@ -237,18 +237,43 @@ z-index: 10;
     grid-area: box-main-img-modal;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: flex;  
     justify-content: center;
     align-items: center;
+    overflow: hidden; /*  */
+}
+.img-box {
+    width: 100%;
+    height: 100%;
+    transition: scale 400ms;
+}
+.img-box:hover {
+    cursor: url(../img/busquedaLupa.png), auto;
+    scale: 110%;
 }
 .main-img-modal {
     width: 60%;
     height: auto;
 }
-.info-modal {
+
+.box-img-barcos{
+    border: 2px solid rgb(119, 71, 35);
+    border-radius: 15px;
+}
+.img-barcos-opa{
+    opacity: 0.4;
+}
+.img-mini{
+    width: 100%;
+    border-radius: 10px;
+}
+.img-mini:hover {
+    border: solid 2px #244096;
+    cursor: pointer;    
+}
+.info-modal { /*  */
     grid-area: info-modal;
-    padding: 30px 60px 30px 30px;
-    
+    padding: 30px 60px 30px 30px;   
 }
 .btn-close {
 position: absolute;
@@ -269,6 +294,77 @@ padding: 0 3px;
     font-size: .9em;
     padding-top: 20px;
 }
+/*  */
+.article {
+    /* border-radius: 10px; */
+    height: 60px;
+    width: 60px;
+    grid-area: article-1;
+}
+.container-img {
+    margin-bottom: 50px; /* espacio entre la parte inferior con el contenido */
+    display: grid;
+    grid-template:  "empty-0        empty-0     empty-0     empty-0     empty-0" 40px
+                    "article-1      empty-1     article-2   empty-2     article-3" 90px
+                    "article-4      empty-1     article-5   empty-2     article-6" 90px /
+                    90px            10px        90px        10px        90px
+}
+.article-1 {
+    grid-area: article-1;
+
+}
+.article-2 {
+    grid-area: article-2;
+}
+.article-3 {
+    grid-area: article-3;
+}
+.article-4 {
+    grid-area: article-4;
+}
+.article-5 {
+    grid-area: article-5;
+}
+/*  */
+/*  */
+/*  */
+.main-barco {
+    width: 100%;
+    height: 100%;
+    z-index: 20; 
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal"  /
+                    150px                       1fr                             350px;
+ }
+.principal-container-img {
+    grid-area: principal-container-img;
+}
+.principal-box-main-img-modal {
+    grid-area: principal-box-main-img-modal;
+    width: 100%;
+    height: 120%;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+.principal-info-modal {
+    grid-area: principal-info-modal;
+    padding: 30px 60px 30px 30px;
+}
+.principal-main-img-modal {
+    width: 60%;
+    height: auto;
+}
+.principal-article {
+    /* border-radius: 10px; */
+    height: 60px;
+    width: 60px;
+    margin: 30px; 
+}
+
 /* Fonts */
 /* poppins-200 - latin */
 @font-face {
