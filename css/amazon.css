@@ -261,7 +261,8 @@ z-index: 20;
    border-radius: 10px;
    position: relative;
    display: grid;
-   grid-template: "box-main-img-modal info-modal"  /
+   grid-template:   "box-video-imagenes box-video-imagenes" 30px
+                    "box-main-img-modal info-modal"  /
                     1fr                350px;
 }
 .box-main-img-modal {
@@ -310,26 +311,47 @@ z-index: 20;
     border: 3px solid rgb(44,176,224,0.3);
     border-radius: 6px;
     padding: 0 3px;
+    cursor: pointer;
 }
 .box-video-imagenes {
-    font-size: 1.1em;
+    grid-area: box-video-imagenes;
+    position: relative;
+    margin: 20px 0;
 }
+
+.box-video-imagenes::before {
+    content: "";
+    display: block;
+    border-top: 2px solid rgb(185, 185, 185);
+    width: 93%;
+    position: absolute;
+    top: 28px;
+    margin: 0 10px 0 20px;
+}
+
+
+
 .video-imagenes {
     cursor: pointer;
+    
 }
 .option-videos {
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: 135px;
 }
 .option-imagenes {
     position: absolute;
-    top: 15px;
+    top: 10px;
     left: 20px;
     
 }
 .option-selected {
-    border-bottom: 2px solid #cf873f;
+/*     position: absolute;
+    display: block;
+    top: 30px;
+    content: ""; */
+    border-bottom: 2px solid #eb9034;
 }
 .txt-caracteristicas-modal {
     font-size: 1.1em;
@@ -407,6 +429,43 @@ z-index: 20;
     grid-area: principal-info-modal;
     padding: 30px 60px 30px 30px;
 }
+/*  */
+.shop-compras {
+    grid-area: principal-info-modal;
+    position: relative;
+    margin-top: 100px;
+    font-weight: 200;
+    font-size: 1.3em;
+}
+.comprar-ahora, .agregar-carrito  {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.agregar-carrito {
+    border: 1px solid rgb(255, 216, 20);
+    background-color: rgb(255, 215, 0);
+
+}
+.agregar-carrito:hover {
+    box-shadow: 10px 10px 60px rgb(255, 215, 0);
+}
+.comprar-ahora {
+    border: 1px solid rgb(250, 137, 0);
+    background-color: rgb(255, 140, 0);
+
+}
+.comprar-ahora:hover {
+    box-shadow: 10px 10px 60px rgb(255, 140, 0);
+}
+/*  */
 .principal-main-img-modal {
     width: 60%;
     height: auto;

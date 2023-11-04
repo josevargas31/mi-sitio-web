@@ -192,3 +192,14 @@ mainImgModal111.addEventListener("click", function() {
   }
 
 });
+/* -------------------------------------------------------------- */
+/*  */
+let comprarAhora = document.getElementById("comprarAhora");
+let agregarCarrito = document.getElementById("agregarCarrito");
+
+comprarAhora.addEventListener("click", () => { 
+  alert("");
+});
+agregarCarrito.addEventListener("click", () => { 
+  alert("¡Ha sido agregado con éxito!");
+});
