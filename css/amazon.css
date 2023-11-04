@@ -315,7 +315,7 @@ z-index: 20;
     font-size: 1.1em;
 }
 .video-imagenes {
-
+    cursor: pointer;
 }
 .option-videos {
     position: absolute;
