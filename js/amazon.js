@@ -198,7 +198,7 @@ let comprarAhora = document.getElementById("comprarAhora");
 let agregarCarrito = document.getElementById("agregarCarrito");
 
 comprarAhora.addEventListener("click", () => { 
-  alert("");
+  alert("¡Gracias por su compra!");
 });
 agregarCarrito.addEventListener("click", () => { 
   alert("¡Ha sido agregado con éxito!");
