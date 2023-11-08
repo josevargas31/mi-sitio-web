@@ -55,50 +55,80 @@ optionImagenes.addEventListener("click", () => {
 /* Cuando haga click en el "" se ejucutara el siguiente funcion */
 
 mainImgModal1.addEventListener("click", () => {
-    mainImgModal.setAttribute("src", "img/barco_uno.jpg");
+  mainImgModal.setAttribute("src", "img/barco_uno.jpg");
 
-    mainImgModal1.classList.add("img-barcos-opa");
-    mainImgModal2.classList.remove("img-barcos-opa");
-    mainImgModal3.classList.remove("img-barcos-opa");
-    mainImgModal4.classList.remove("img-barcos-opa");
-    mainImgModal5.classList.remove("img-barcos-opa");
-  });
+  boxMainImgModal1.classList.add("box-img-barcos");
+  boxMainImgModal2.classList.remove("box-img-barcos");
+  boxMainImgModal3.classList.remove("box-img-barcos");
+  boxMainImgModal4.classList.remove("box-img-barcos");
+  boxMainImgModal5.classList.remove("box-img-barcos");
+
+  mainImgModal1.classList.add("img-barcos-opa");
+  mainImgModal2.classList.remove("img-barcos-opa");
+  mainImgModal3.classList.remove("img-barcos-opa");
+  mainImgModal4.classList.remove("img-barcos-opa");
+  mainImgModal5.classList.remove("img-barcos-opa");
+});
 mainImgModal2.addEventListener("click", () => {
-    mainImgModal.setAttribute("src", "img/barco_dos.jpg");
+  mainImgModal.setAttribute("src", "img/barco_dos.jpg");
 
-    mainImgModal1.classList.remove("img-barcos-opa");
-    mainImgModal2.classList.add("img-barcos-opa");
-    mainImgModal3.classList.remove("img-barcos-opa");
-    mainImgModal4.classList.remove("img-barcos-opa");
-    mainImgModal5.classList.remove("img-barcos-opa");
-  });
+  boxMainImgModal1.classList.remove("box-img-barcos");
+  boxMainImgModal2.classList.add("box-img-barcos");
+  boxMainImgModal3.classList.remove("box-img-barcos");
+  boxMainImgModal4.classList.remove("box-img-barcos");
+  boxMainImgModal5.classList.remove("box-img-barcos");
+
+  mainImgModal1.classList.remove("img-barcos-opa");
+  mainImgModal2.classList.add("img-barcos-opa");
+  mainImgModal3.classList.remove("img-barcos-opa");
+  mainImgModal4.classList.remove("img-barcos-opa");
+  mainImgModal5.classList.remove("img-barcos-opa");
+});
 mainImgModal3.addEventListener("click", () => {
-    mainImgModal.setAttribute("src", "img/barco_tres.jpg");
+  mainImgModal.setAttribute("src", "img/barco_tres.jpg");
 
-    mainImgModal1.classList.remove("img-barcos-opa");
-    mainImgModal2.classList.remove("img-barcos-opa");
-    mainImgModal3.classList.add("img-barcos-opa");
-    mainImgModal4.classList.remove("img-barcos-opa");
-    mainImgModal5.classList.remove("img-barcos-opa");
-  });
+  boxMainImgModal1.classList.remove("box-img-barcos");
+  boxMainImgModal2.classList.remove("box-img-barcos");
+  boxMainImgModal3.classList.add("box-img-barcos");
+  boxMainImgModal4.classList.remove("box-img-barcos");
+  boxMainImgModal5.classList.remove("box-img-barcos");
+
+  mainImgModal1.classList.remove("img-barcos-opa");
+  mainImgModal2.classList.remove("img-barcos-opa");
+  mainImgModal3.classList.add("img-barcos-opa");
+  mainImgModal4.classList.remove("img-barcos-opa");
+  mainImgModal5.classList.remove("img-barcos-opa");
+});
 mainImgModal4.addEventListener("click", () => {
-    mainImgModal.setAttribute("src", "img/barco_cuatro.jpg");
-    
-    mainImgModal1.classList.remove("img-barcos-opa");
-    mainImgModal2.classList.remove("img-barcos-opa");
-    mainImgModal3.classList.remove("img-barcos-opa");
-    mainImgModal4.classList.add("img-barcos-opa");
-    mainImgModal5.classList.remove("img-barcos-opa");
-  });
-mainImgModal5.addEventListener("click", () => {
-    mainImgModal.setAttribute("src", "img/barco_cinco.jpg");
+  mainImgModal.setAttribute("src", "img/barco_cuatro.jpg");
 
-    mainImgModal1.classList.remove("img-barcos-opa");
-    mainImgModal2.classList.remove("img-barcos-opa");
-    mainImgModal3.classList.remove("img-barcos-opa");
-    mainImgModal4.classList.remove("img-barcos-opa");
-    mainImgModal5.classList.add("img-barcos-opa");
-  });
+  boxMainImgModal1.classList.remove("box-img-barcos");
+  boxMainImgModal2.classList.remove("box-img-barcos");
+  boxMainImgModal3.classList.remove("box-img-barcos");
+  boxMainImgModal4.classList.add("box-img-barcos");
+  boxMainImgModal5.classList.remove("box-img-barcos");
+  
+  mainImgModal1.classList.remove("img-barcos-opa");
+  mainImgModal2.classList.remove("img-barcos-opa");
+  mainImgModal3.classList.remove("img-barcos-opa");
+  mainImgModal4.classList.add("img-barcos-opa");
+  mainImgModal5.classList.remove("img-barcos-opa");
+});
+mainImgModal5.addEventListener("click", () => {
+  mainImgModal.setAttribute("src", "img/barco_cinco.jpg");
+
+  boxMainImgModal1.classList.remove("box-img-barcos");
+  boxMainImgModal2.classList.remove("box-img-barcos");
+  boxMainImgModal3.classList.remove("box-img-barcos");
+  boxMainImgModal4.classList.remove("box-img-barcos");
+  boxMainImgModal5.classList.add("box-img-barcos");
+
+  mainImgModal1.classList.remove("img-barcos-opa");
+  mainImgModal2.classList.remove("img-barcos-opa");
+  mainImgModal3.classList.remove("img-barcos-opa");
+  mainImgModal4.classList.remove("img-barcos-opa");
+  mainImgModal5.classList.add("img-barcos-opa");
+});
 
 
 /* -------------------------------------------------------------- */
@@ -118,78 +148,78 @@ let boxMainImgModal33 = document.getElementById("boxMainImgModal33");
 let boxMainImgModal44 = document.getElementById("boxMainImgModal44");
 let boxMainImgModal55 = document.getElementById("boxMainImgModal55");
 
-  mainImgModal11.addEventListener("click", () => {
-    mainImgModal111.setAttribute("src", "img/barco_uno.jpg");
-    boxMainImgModal11.classList.add("box-img-barcos");
-    boxMainImgModal22.classList.remove("box-img-barcos");
-    boxMainImgModal33.classList.remove("box-img-barcos");
-    boxMainImgModal44.classList.remove("box-img-barcos");
-    boxMainImgModal55.classList.remove("box-img-barcos");
-    mainImgModal11.classList.add("img-barcos-opa");
-    mainImgModal22.classList.remove("img-barcos-opa");
-    mainImgModal334.classList.remove("img-barcos-opa");
-    mainImgModal44.classList.remove("img-barcos-opa");
-    mainImgModal55.classList.remove("img-barcos-opa");
-  });
+mainImgModal11.addEventListener("click", () => {
+  mainImgModal111.setAttribute("src", "img/barco_uno.jpg");
+  boxMainImgModal11.classList.add("box-img-barcos");
+  boxMainImgModal22.classList.remove("box-img-barcos");
+  boxMainImgModal33.classList.remove("box-img-barcos");
+  boxMainImgModal44.classList.remove("box-img-barcos");
+  boxMainImgModal55.classList.remove("box-img-barcos");
+  mainImgModal11.classList.add("img-barcos-opa");
+  mainImgModal22.classList.remove("img-barcos-opa");
+  mainImgModal334.classList.remove("img-barcos-opa");
+  mainImgModal44.classList.remove("img-barcos-opa");
+  mainImgModal55.classList.remove("img-barcos-opa");
+});
 mainImgModal22.addEventListener("click", () => {
-    mainImgModal111.setAttribute("src", "img/barco_dos.jpg");
-    boxMainImgModal11.classList.remove("box-img-barcos");
-    boxMainImgModal22.classList.add("box-img-barcos");
-    boxMainImgModal33.classList.remove("box-img-barcos");
-    boxMainImgModal44.classList.remove("box-img-barcos");
-    boxMainImgModal55.classList.remove("box-img-barcos");
-    mainImgModal11.classList.remove("img-barcos-opa");
-    mainImgModal22.classList.add("img-barcos-opa");
-    mainImgModal33.classList.remove("img-barcos-opa");
-    mainImgModal44.classList.remove("img-barcos-opa");
-    mainImgModal55.classList.remove("img-barcos-opa");
-  });
+  mainImgModal111.setAttribute("src", "img/barco_dos.jpg");
+  boxMainImgModal11.classList.remove("box-img-barcos");
+  boxMainImgModal22.classList.add("box-img-barcos");
+  boxMainImgModal33.classList.remove("box-img-barcos");
+  boxMainImgModal44.classList.remove("box-img-barcos");
+  boxMainImgModal55.classList.remove("box-img-barcos");
+  mainImgModal11.classList.remove("img-barcos-opa");
+  mainImgModal22.classList.add("img-barcos-opa");
+  mainImgModal33.classList.remove("img-barcos-opa");
+  mainImgModal44.classList.remove("img-barcos-opa");
+  mainImgModal55.classList.remove("img-barcos-opa");
+});
 mainImgModal33.addEventListener("click", () => {
-    mainImgModal111.setAttribute("src", "img/barco_tres.jpg");
-    boxMainImgModal11.classList.remove("box-img-barcos");
-    boxMainImgModal22.classList.remove("box-img-barcos");
-    boxMainImgModal33.classList.add("box-img-barcos");
-    boxMainImgModal44.classList.remove("box-img-barcos");
-    boxMainImgModal55.classList.remove("box-img-barcos");
-    mainImgModal11.classList.remove("img-barcos-opa");
-    mainImgModal22.classList.remove("img-barcos-opa");
-    mainImgModal33.classList.add("img-barcos-opa");
-    mainImgModal44.classList.remove("img-barcos-opa");
-    mainImgModal55.classList.remove("img-barcos-opa");
-  });
+  mainImgModal111.setAttribute("src", "img/barco_tres.jpg");
+  boxMainImgModal11.classList.remove("box-img-barcos");
+  boxMainImgModal22.classList.remove("box-img-barcos");
+  boxMainImgModal33.classList.add("box-img-barcos");
+  boxMainImgModal44.classList.remove("box-img-barcos");
+  boxMainImgModal55.classList.remove("box-img-barcos");
+  mainImgModal11.classList.remove("img-barcos-opa");
+  mainImgModal22.classList.remove("img-barcos-opa");
+  mainImgModal33.classList.add("img-barcos-opa");
+  mainImgModal44.classList.remove("img-barcos-opa");
+  mainImgModal55.classList.remove("img-barcos-opa");
+});
 mainImgModal44.addEventListener("click", () => {
-    mainImgModal111.setAttribute("src", "img/barco_cuatro.jpg");
-    boxMainImgModal11.classList.remove("box-img-barcos");
-    boxMainImgModal22.classList.remove("box-img-barcos");
-    boxMainImgModal33.classList.remove("box-img-barcos");
-    boxMainImgModal44.classList.add("box-img-barcos");
-    boxMainImgModal55.classList.remove("box-img-barcos");
-    mainImgModal11.classList.remove("img-barcos-opa");
-    mainImgModal22.classList.remove("img-barcos-opa");
-    mainImgModal33.classList.remove("img-barcos-opa");
-    mainImgModal44.classList.add("img-barcos-opa");
-    mainImgModal55.classList.remove("img-barcos-opa");
-  });
+  mainImgModal111.setAttribute("src", "img/barco_cuatro.jpg");
+  boxMainImgModal11.classList.remove("box-img-barcos");
+  boxMainImgModal22.classList.remove("box-img-barcos");
+  boxMainImgModal33.classList.remove("box-img-barcos");
+  boxMainImgModal44.classList.add("box-img-barcos");
+  boxMainImgModal55.classList.remove("box-img-barcos");
+  mainImgModal11.classList.remove("img-barcos-opa");
+  mainImgModal22.classList.remove("img-barcos-opa");
+  mainImgModal33.classList.remove("img-barcos-opa");
+  mainImgModal44.classList.add("img-barcos-opa");
+  mainImgModal55.classList.remove("img-barcos-opa");
+});
 mainImgModal55.addEventListener("click", () => {
-    mainImgModal111.setAttribute("src", "img/barco_cinco.jpg");
-    boxMainImgModal11.classList.remove("box-img-barcos");
-    boxMainImgModal22.classList.remove("box-img-barcos");
-    boxMainImgModal33.classList.remove("box-img-barcos");
-    boxMainImgModal44.classList.remove("box-img-barcos");
-    boxMainImgModal55.classList.add("box-img-barcos");
-    mainImgModal11.classList.remove("img-barcos-opa");
-    mainImgModal22.classList.remove("img-barcos-opa");
-    mainImgModal33.classList.remove("img-barcos-opa");
-    mainImgModal44.classList.remove("img-barcos-opa");
-    mainImgModal55.classList.add("img-barcos-opa");
-  });
+  mainImgModal111.setAttribute("src", "img/barco_cinco.jpg");
+  boxMainImgModal11.classList.remove("box-img-barcos");
+  boxMainImgModal22.classList.remove("box-img-barcos");
+  boxMainImgModal33.classList.remove("box-img-barcos");
+  boxMainImgModal44.classList.remove("box-img-barcos");
+  boxMainImgModal55.classList.add("box-img-barcos");
+  mainImgModal11.classList.remove("img-barcos-opa");
+  mainImgModal22.classList.remove("img-barcos-opa");
+  mainImgModal33.classList.remove("img-barcos-opa");
+  mainImgModal44.classList.remove("img-barcos-opa");
+  mainImgModal55.classList.add("img-barcos-opa");
+});
 
-  /* sirve para ocultar una etiqueta HTML utilizando su ID */  /* aqui voy jsjsjsjs */
+/* sirve para ocultar una etiqueta HTML utilizando su ID */  /* aqui voy jsjsjsjs */
 mainImgModal111.addEventListener("click", function() {
 
-  if (mainContent.style.display === "none") {
-  mainContent.style.display = "block"; 
-  }
+if (mainContent.style.display === "none") {
+mainContent.style.display = "block"; 
+}
 
 });
 /* -------------------------------------------------------------- */
@@ -198,8 +228,8 @@ let comprarAhora = document.getElementById("comprarAhora");
 let agregarCarrito = document.getElementById("agregarCarrito");
 
 comprarAhora.addEventListener("click", () => { 
-  alert("¡Gracias por su compra!");
+alert("¡Gracias por su compra!");
 });
 agregarCarrito.addEventListener("click", () => { 
-  alert("¡Ha sido agregado con éxito!");
+alert("¡Ha sido agregado con éxito!");
 });
