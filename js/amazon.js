@@ -131,99 +131,9 @@ mainImgModal5.addEventListener("click", () => {
 });
 
 
+
 /* -------------------------------------------------------------- */
-/*  */
-/*  */
-let mainImgModal111 = document.getElementById("mainImgModal111");
-
-let mainImgModal11 = document.getElementById("mainImgModal11");
-let mainImgModal22 = document.getElementById("mainImgModal22");
-let mainImgModal33 = document.getElementById("mainImgModal33");
-let mainImgModal44 = document.getElementById("mainImgModal44");
-let mainImgModal55 = document.getElementById("mainImgModal55");
-
-let boxMainImgModal11 = document.getElementById("boxMainImgModal11");
-let boxMainImgModal22 = document.getElementById("boxMainImgModal22");
-let boxMainImgModal33 = document.getElementById("boxMainImgModal33");
-let boxMainImgModal44 = document.getElementById("boxMainImgModal44");
-let boxMainImgModal55 = document.getElementById("boxMainImgModal55");
-
-mainImgModal11.addEventListener("click", () => {
-  mainImgModal111.setAttribute("src", "img/barco_uno.jpg");
-  boxMainImgModal11.classList.add("box-img-barcos");
-  boxMainImgModal22.classList.remove("box-img-barcos");
-  boxMainImgModal33.classList.remove("box-img-barcos");
-  boxMainImgModal44.classList.remove("box-img-barcos");
-  boxMainImgModal55.classList.remove("box-img-barcos");
-  mainImgModal11.classList.add("img-barcos-opa");
-  mainImgModal22.classList.remove("img-barcos-opa");
-  mainImgModal334.classList.remove("img-barcos-opa");
-  mainImgModal44.classList.remove("img-barcos-opa");
-  mainImgModal55.classList.remove("img-barcos-opa");
-});
-mainImgModal22.addEventListener("click", () => {
-  mainImgModal111.setAttribute("src", "img/barco_dos.jpg");
-  boxMainImgModal11.classList.remove("box-img-barcos");
-  boxMainImgModal22.classList.add("box-img-barcos");
-  boxMainImgModal33.classList.remove("box-img-barcos");
-  boxMainImgModal44.classList.remove("box-img-barcos");
-  boxMainImgModal55.classList.remove("box-img-barcos");
-  mainImgModal11.classList.remove("img-barcos-opa");
-  mainImgModal22.classList.add("img-barcos-opa");
-  mainImgModal33.classList.remove("img-barcos-opa");
-  mainImgModal44.classList.remove("img-barcos-opa");
-  mainImgModal55.classList.remove("img-barcos-opa");
-});
-mainImgModal33.addEventListener("click", () => {
-  mainImgModal111.setAttribute("src", "img/barco_tres.jpg");
-  boxMainImgModal11.classList.remove("box-img-barcos");
-  boxMainImgModal22.classList.remove("box-img-barcos");
-  boxMainImgModal33.classList.add("box-img-barcos");
-  boxMainImgModal44.classList.remove("box-img-barcos");
-  boxMainImgModal55.classList.remove("box-img-barcos");
-  mainImgModal11.classList.remove("img-barcos-opa");
-  mainImgModal22.classList.remove("img-barcos-opa");
-  mainImgModal33.classList.add("img-barcos-opa");
-  mainImgModal44.classList.remove("img-barcos-opa");
-  mainImgModal55.classList.remove("img-barcos-opa");
-});
-mainImgModal44.addEventListener("click", () => {
-  mainImgModal111.setAttribute("src", "img/barco_cuatro.jpg");
-  boxMainImgModal11.classList.remove("box-img-barcos");
-  boxMainImgModal22.classList.remove("box-img-barcos");
-  boxMainImgModal33.classList.remove("box-img-barcos");
-  boxMainImgModal44.classList.add("box-img-barcos");
-  boxMainImgModal55.classList.remove("box-img-barcos");
-  mainImgModal11.classList.remove("img-barcos-opa");
-  mainImgModal22.classList.remove("img-barcos-opa");
-  mainImgModal33.classList.remove("img-barcos-opa");
-  mainImgModal44.classList.add("img-barcos-opa");
-  mainImgModal55.classList.remove("img-barcos-opa");
-});
-mainImgModal55.addEventListener("click", () => {
-  mainImgModal111.setAttribute("src", "img/barco_cinco.jpg");
-  boxMainImgModal11.classList.remove("box-img-barcos");
-  boxMainImgModal22.classList.remove("box-img-barcos");
-  boxMainImgModal33.classList.remove("box-img-barcos");
-  boxMainImgModal44.classList.remove("box-img-barcos");
-  boxMainImgModal55.classList.add("box-img-barcos");
-  mainImgModal11.classList.remove("img-barcos-opa");
-  mainImgModal22.classList.remove("img-barcos-opa");
-  mainImgModal33.classList.remove("img-barcos-opa");
-  mainImgModal44.classList.remove("img-barcos-opa");
-  mainImgModal55.classList.add("img-barcos-opa");
-});
-
-/* sirve para ocultar una etiqueta HTML utilizando su ID */  /* aqui voy jsjsjsjs */
-mainImgModal111.addEventListener("click", function() {
-
-if (mainContent.style.display === "none") {
-mainContent.style.display = "block"; 
-}
-
-});
-/* -------------------------------------------------------------- */
-/*  */
+/* Alertas al darle click a unos botones */
 let comprarAhora = document.getElementById("comprarAhora");
 let agregarCarrito = document.getElementById("agregarCarrito");
 
@@ -233,3 +143,62 @@ alert("¡Gracias por su compra!");
 agregarCarrito.addEventListener("click", () => { 
 alert("¡Ha sido agregado con éxito!");
 });
+
+/* -------------------------------------------------------------- */
+/* */
+
+
+let mainImgModal111 = document.getElementById("mainImgModal111");
+
+
+/* sirve para ocultar una etiqueta HTML utilizando su ID */  /* aqui voy jsjsjsjs */
+mainImgModal111.addEventListener("click", function() {
+  if (mainContent.style.display === "none") {
+  mainContent.style.display = "block"; 
+  }
+  });
+
+/* -------------------------------------------------------------- */
+/* El cambio de la imagen al pasar el cursor por encima y que se mantenga la imagen */
+let miniaturas = document.querySelectorAll('.img-mini');
+
+miniaturas.forEach((miniatura) => {
+    miniatura.addEventListener('click', () => {
+
+    const imagenPrincipal = document.getElementById('mainImgModal');
+    const src = miniatura.getAttribute('src');
+    imagenPrincipal.setAttribute('src', src);
+    imagenPrincipal.classList.add('enlarge');
+    });
+});
+let containerImg = document.querySelector('.principal-container-img');
+let imagenPrincipal = document.getElementById('mainImgModal111');
+
+
+containerImg.addEventListener('mouseover', (event) => {
+  if (event.target && event.target.classList.contains('principal-article')) {
+    const src = event.target.querySelector('.img-mini-p').getAttribute('src');
+    imagenPrincipal.setAttribute('src', src);
+
+  }
+});
+
+/*  */
+/*  */
+window.onload = () => {
+  let modalt = document.getElementById('modalt');
+  let mainImgModal111 = document.getElementById('mainImgModal111');
+
+  // Al cargar la página, quitamos ciertos estilos del contenedor 1
+  modalt.classList.add('quitar-estilo');
+  
+  // Agregamos un evento de clic al contenedor 2
+  mainImgModal111.addEventListener('click', () => {
+      // Al hacer clic en el contenedor 2, volvemos a agregar los estilos al contenedor 1
+      modalt.classList.remove('quitar-estilo');
+  });
+}
+
+
+
+
