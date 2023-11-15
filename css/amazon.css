@@ -297,7 +297,7 @@ z-index: 20;
     scale: 110%;
 }
 .main-img-modal {
-    width: 50%;
+    width: 30%;
     height: auto;
 }
 
@@ -429,7 +429,7 @@ z-index: 20;
     position: relative;
     display: grid;
     grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal    principal-compra-modal"  /
-                    150px                       1fr                             350px                  300px;
+                    150px                       1fr                             450px                  300px;
  }
 .principal-container-img {
     grid-area: principal-container-img;
@@ -441,15 +441,26 @@ z-index: 20;
     display: flex;  
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
+.img-box-principal {
+    width: 100%;
+    height: 100%;
+    transition: scale 400ms;
+}
+.img-box-principal:hover {
+    cursor: url(../img/busquedaLupa.png), auto;
+    scale: 110%;
+}
+
 .principal-info-modal {
     grid-area: principal-info-modal;
-    padding: 30px 60px 30px 30px;
+    padding: 30px 10px 30px 10px;
 }
 .principal-compra-modal {
     grid-area: principal-compra-modal;
     margin: 30px 30px 30px 30px;
-    padding: 10px 20px 10px 7px;
+    padding: 10px 20px 10px 20px;
     border: solid 1px rgb(182, 182, 182);
 }
 /* principal-compra-modal */
@@ -463,26 +474,50 @@ z-index: 20;
     align-items: flex-start;
 }
 .txt-precio {
-    font-size: 1.9em;
+    font-size: 1.5em;
     font-weight: 500;
 }
-.txt-caracteristicas-modal-entrega {
-
+.txt-detalles, .principal-enviar-a {
+    color: rgb(81, 158, 206);
+}
+.principal-enviar-a {
+    font-size: 0.9em;
+}
+.principal-icon {
+    color: rgb(35, 33, 33);
+    font-weight: 100;
+}
+.txt-disponible {
+    color: rgb(52, 119, 35);
+    font-size: 1.2em;
+    font-weight: 500;
 }
 .envio-gratis {
     font-weight: 700;
     color: rgb(136, 136, 136);
 }
 .txt-entrega {
-    color: rgb(169, 169, 169);
+    color: rgb(127, 127, 127);
 }
 .txt-entrega-negrita {
     font-weight: 600;
 
 }
 .txt-entrega-verde {
-    color: green;
-    
+    color: green;    
+}
+.principal-cantidad {
+    margin-top: 15px;
+}
+.principal-select {
+    border-radius: 10px;
+    width: 100px;
+    padding: 5px;
+    background-color: rgb(189, 219, 238);
+    box-shadow: 2px 2px 10px 3px #75e4fc;
+}
+.principal-select:hover {
+    background-color: rgb(172, 179, 184);
 }
 /*  */
 .shop-compras {
@@ -490,9 +525,9 @@ z-index: 20;
     font-size: 1.1em;
 }
 .comprar-ahora, .agregar-carrito  {
-    width: 180px;
+    width: 200px;
     height: 35px;
-    margin: 20px;
+    margin-top: 20px;
     border-radius: 25px;
     font-weight: 300;
     cursor: pointer;
@@ -547,19 +582,13 @@ z-index: 20;
     /* border-radius: 10px; */
 }
 
-/*  */
-/* main {
-    display: none;
-}
-main.visible {
-width: 100vh;
-height: 100%;
-} */
+
 
 /* Informacion del Producto */
 .infoproduc{
     margin-left: auto;
     line-height: 30px;
+    padding-bottom: 10px;
   }
   .marca{
     text-decoration: none;
@@ -596,3 +625,14 @@ height: 100%;
     text-decoration: underline;
     color: #C7511F;
   }
+
+  /*  */
+  /*  */
+.estrella {
+    color: rgb(255, 164, 28);
+    font-size: 2em;
+}
+.box-estrellas {
+    display: flex;
+    flex-direction: row;
+}
