@@ -368,7 +368,7 @@ z-index: 20;
     border-bottom: 2px solid #eb9034;
 }
 .txt-caracteristicas-modal {
-    font-size: 1.1em;
+    font-size: 1.3em;
     text-align: justify;
     line-height: 1em;
 }
@@ -428,8 +428,8 @@ z-index: 20;
     border-radius: 10px;
     position: relative;
     display: grid;
-    grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal"  /
-                    150px                       1fr                             350px;
+    grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal    principal-compra-modal"  /
+                    150px                       1fr                             350px                  300px;
  }
 .principal-container-img {
     grid-area: principal-container-img;
@@ -445,6 +445,44 @@ z-index: 20;
 .principal-info-modal {
     grid-area: principal-info-modal;
     padding: 30px 60px 30px 30px;
+}
+.principal-compra-modal {
+    grid-area: principal-compra-modal;
+    margin: 30px 30px 30px 30px;
+    padding: 10px 20px 10px 7px;
+    border: solid 1px rgb(182, 182, 182);
+}
+/* principal-compra-modal */
+.compra-precio {
+    margin-bottom: 10px;
+}
+.txt-moneda-number {
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+}
+.txt-precio {
+    font-size: 1.9em;
+    font-weight: 500;
+}
+.txt-caracteristicas-modal-entrega {
+
+}
+.envio-gratis {
+    font-weight: 700;
+    color: rgb(136, 136, 136);
+}
+.txt-entrega {
+    color: rgb(169, 169, 169);
+}
+.txt-entrega-negrita {
+    font-weight: 600;
+
+}
+.txt-entrega-verde {
+    color: green;
+    
 }
 /*  */
 .shop-compras {
@@ -487,12 +525,6 @@ z-index: 20;
     width: 60%;
     height: auto;
 }
-/* .principal-article {
-
-    height: 60px;
-    width: 60px;
-    margin: 30px; 
-} */
 .principal-article {
     border-radius: 10px;
     border: 2px solid rgb(158, 158, 158);
