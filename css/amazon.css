@@ -487,22 +487,18 @@ z-index: 20;
 /*  */
 .shop-compras {
     grid-area: principal-info-modal;
-    position: relative;
-    margin-top: 100px;
-    font-weight: 200;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 .comprar-ahora, .agregar-carrito  {
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 35px;
+    margin: 20px;
+    border-radius: 25px;
+    font-weight: 300;
+    cursor: pointer;
     display: flex;
-    margin: 30px;
     justify-content: center;
     align-items: center;
-    border-radius: 25px;
-    font-weight: 600;
-    cursor: pointer;
-
 }
 .agregar-carrito {
     border: 1px solid rgb(255, 216, 20);
@@ -513,6 +509,7 @@ z-index: 20;
     box-shadow: 10px 10px 60px rgb(255, 215, 0);
 }
 .comprar-ahora {
+
     border: 1px solid rgb(250, 137, 0);
     background-color: rgb(255, 140, 0);
 
