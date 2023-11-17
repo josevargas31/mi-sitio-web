@@ -429,7 +429,7 @@ z-index: 20;
     position: relative;
     display: grid;
     grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal    principal-compra-modal"  /
-                    150px                       1fr                             450px                  300px;
+                    10px                        1fr                             400px                   300px;
  }
 .principal-container-img {
     grid-area: principal-container-img;
@@ -455,7 +455,7 @@ z-index: 20;
 
 .principal-info-modal {
     grid-area: principal-info-modal;
-    padding: 30px 10px 30px 10px;
+    padding: 30px 10px 30px 0;
 }
 .principal-compra-modal {
     grid-area: principal-compra-modal;
@@ -608,9 +608,9 @@ z-index: 20;
     display: block;
     font-size: 14px;
   }
-  .fa-star, .fa-star-half-stroke{
+/*   .fa-star, .fa-star-half-stroke{
     color: #ffa600;
-  }
+  } */
   .star-select{
     border: none;
     font-size: 4px;
@@ -629,10 +629,19 @@ z-index: 20;
   /*  */
   /*  */
 .estrella {
-    color: rgb(255, 164, 28);
+    /* color: rgb(0, 0, 0); */
     font-size: 2em;
 }
 .box-estrellas {
     display: flex;
     flex-direction: row;
+}
+.fa-regular {
+    color: #75e4fc;
+}
+.fa-solid {
+    color: #244096;
+}
+.fa-star-half-stroke {
+    color: #565959;
 }
