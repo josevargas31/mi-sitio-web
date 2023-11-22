@@ -434,7 +434,7 @@ z-index: 20;
 .principal-container-img {
     grid-area: principal-container-img;
 }
-.principal-box-main-img-modal {
+.principal-box-main-img-modal {  /*  */ /*  */
     grid-area: principal-box-main-img-modal;
     width: 110%;
     display: flex;
@@ -442,9 +442,20 @@ z-index: 20;
     align-items: flex-start;
     height: 100vh;
     padding-top: 50px;
-
-   /*  overflow: hidden; */
+    overflow: hidden;
     /* background-color: #C7511F; */
+    
+}
+.mouse-zoom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 21%;
+}
+.txt-mouse-zoom {
+    font-size: 25px;
+    font-weight: 500;
 }
 .img-box-principal {
     width: 100%;
@@ -611,6 +622,7 @@ z-index: 20;
   .califica{
     display: block;
     font-size: 14px;
+    margin-right: 10px;
   }
   .star-select{
     border: none;
@@ -645,6 +657,10 @@ z-index: 20;
     list-style-type: disc; /* Agrega bolitas a los elementos de la lista */
     margin-left: 20px; /* Añade un margen a la izquierda para dar espacio a las bolitas */
   }
+  .fa-spinner {
+    margin-right: 10px;
+    font-weight: 800;
+  }
 
   /*  */
   /*  */
@@ -655,9 +671,50 @@ z-index: 20;
   .box-estrellas{
     display: flex;
     flex-direction: row;
-    background-color: #75e4fc;
+    /* background-color: #75e4fc; */
   }
 /*  */
+/*  */
+
+.content-img {
+    height: 92%;
+}
+.producto {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+.producto:hover::after {
+    content: 'Haz click para ampliar el contenedor madal';
+    background-color: #ffF;
+    z-index: 1000;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+}
+.cordenadas {
+    width: 140px;
+    height: 130px;
+    border: 0.5px solid #333;
+    background-color: #fff9;
+    position: absolute;
+    display: none;
+}
+.magnifier {
+    width: 48%; /* Ancho de la lupa */
+    height: 82%; /* Altura de la lupa */
+    border: 2px solid var(--gris);
+    position: absolute;
+    cursor: crosshair;
+    display: none;
+    background-image: url('../img/auriculares1.jpg'); /* URL de tu imagen */
+    background-size: 1500px; /* Ancho del contenedor de la imagen */
+    top: 96px;
+    left: 31.9%;
+}
 
 
 

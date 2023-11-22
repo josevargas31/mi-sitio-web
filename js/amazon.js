@@ -206,21 +206,21 @@ let start2 = document.getElementById("start2")
 let start3 = document.getElementById("start3")
 let start4 = document.getElementById("start4")
 let start5 = document.getElementById("start5")
-let puntuacion = document.getElementById("puntuacion").innerText = 3
+let puntuacion = document.getElementById("puntuacion").innerText
     
     if(puntuacion >= 0 && puntuacion <= 0.2) {
-        start1.setAttribute("class", "fa-regular fa-star")
-        start2.setAttribute("class", "fa-regular fa-star")
-        start3.setAttribute("class", "fa-regular fa-star")
-        start4.setAttribute("class", "fa-regular fa-star")
-        start5.setAttribute("class", "fa-regular fa-star")
+        start1.setAttribute("class", "estrella fa-regular fa-star")
+        start2.setAttribute("class", "estrella fa-regular fa-star")
+        start3.setAttribute("class", "estrella fa-regular fa-star")
+        start4.setAttribute("class", "estrella fa-regular fa-star")
+        start5.setAttribute("class", "estrella fa-regular fa-star")
     }
     else if(puntuacion >= 0.3 && puntuacion <= 0.7) {
         start1.setAttribute("class", "estrella fa-solid fa-star-half-stroke")
         start2.setAttribute("class", "estrella fa-regular fa-star")
         start3.setAttribute("class", "estrella fa-regular fa-star")
-        start4.setAttribute("class", "fa-regular fa-star")
-        start5.setAttribute("class", "fa-regular fa-star")
+        start4.setAttribute("class", "estrella fa-regular fa-star")
+        start5.setAttribute("class", "estrella fa-regular fa-star")
     }
     else if(puntuacion >= 0.8 && puntuacion <= 1.2) {
         start1.setAttribute("class", "estrella fa-solid fa-star")
@@ -293,6 +293,22 @@ let puntuacion = document.getElementById("puntuacion").innerText = 3
 
 /*  */
 /* zoom */
+// Para la lupa
+const imageContainer = document.querySelector('#producto');
+const magnifier = document.querySelector('.magnifier');
+const originalImage = document.getElementById('original-image');
+
+imageContainer.addEventListener('mousemove', (e) => {
+    const containerRect = imageContainer.getBoundingClientRect();
+    const offsetX = e.clientX - containerRect.left;
+    const offsetY = e.clientY - containerRect.top;
+
+    const backgroundX = (offsetX / imageContainer.offsetWidth) * 100;
+    const backgroundY = (offsetY / imageContainer.offsetHeight) * 100;
+
+    magnifier.style.backgroundPosition = `${backgroundX}% ${backgroundY}%`;
+    magnifier.style.display = 'block';
+});
 
 
 
