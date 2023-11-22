@@ -52,6 +52,20 @@ optionImagenes.addEventListener("click", () => {
   optionImagenes.classList.add("option-selected");
   optionVideos.classList.remove("option-selected");
 });
+
+/* Al darle click en videos desaparecera todo lo de imagenes y se diseversa */
+let infoModal = document.getElementById("info-modal");
+optionVideos.addEventListener("click", function() {
+  mainImgModal.style.display = "none";
+  infoModal.style.display = "none";
+});
+optionImagenes.addEventListener("click", function() {
+  mainImgModal.style.display = "block";
+  infoModal.style.display = "block";
+});
+
+/*  */
+/*  */
 /* Cuando haga click en el "" se ejucutara el siguiente funcion */
 
 mainImgModal1.addEventListener("click", () => {
@@ -144,19 +158,6 @@ agregarCarrito.addEventListener("click", () => {
 alert("¡Ha sido agregado con éxito!");
 });
 
-/* -------------------------------------------------------------- */
-/* */
-
-
-let mainImgModal111 = document.getElementById("mainImgModal111");
-
-
-/* sirve para ocultar una etiqueta HTML utilizando su ID */  /* aqui voy jsjsjsjs */
-mainImgModal111.addEventListener("click", function() {
-  if (mainContent.style.display === "none") {
-  mainContent.style.display = "block"; 
-  }
-  });
 
 /* -------------------------------------------------------------- */
 /* El cambio de la imagen al pasar el cursor por encima y que se mantenga la imagen */
@@ -200,15 +201,17 @@ window.onload = () => {
 }
 /*  */
 /*  */
-/* const star1 = document.getElementById('star1');
+const star1 = document.getElementById('star1');
 const star2 = document.getElementById('star2');
 const star3 = document.getElementById('star3');
 const star4 = document.getElementById('star4');
 const star5 = document.getElementById('star5');
 
+let puntuacionGuardada = 0; // Variable para guardar la puntuación actual
+
 document.querySelector('.box-estrellas').addEventListener("mouseover", (e) => {
   const puntuacion = parseFloat(e.target.id.slice(-1)); // Obtener la puntuación del elemento afectado
-  
+
   // Remover todas las clases existentes
   star1.setAttribute("class", "fa-regular fa-star");
   star2.setAttribute("class", "fa-regular fa-star");
@@ -219,101 +222,104 @@ document.querySelector('.box-estrellas').addEventListener("mouseover", (e) => {
   if (puntuacion >= 0 && puntuacion <= 0.2) {
     // No se establece ninguna estrella
   } else if (puntuacion > 0.2 && puntuacion <= 0.7) {
-    star1.setAttribute("class", "fa-solid fa-solid fa-star-half-stroke-stroke");
-  } else if (puntuacion > 0.7 && puntuacion <= 1.2) {
+    star1.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacion > 0.8 && puntuacion <= 1.2) {
     star1.setAttribute("class", "fa-solid fa-star");
-  } else if (puntuacion > 1.2 && puntuacion <= 1.7) {
+  } else if (puntuacion > 1.3 && puntuacion <= 1.7) {
     star1.setAttribute("class", "fa-solid fa-star");
-    star2.setAttribute("class", "fa-solid fa-solid fa-star-half-stroke-stroke");
-  } else if (puntuacion > 1.7 && puntuacion <= 2.2) {
-    star1.setAttribute("class", "fa-solid fa-star");
-    star2.setAttribute("class", "fa-solid fa-star");
-  } else if (puntuacion > 2.2 && puntuacion <= 2.7) {
+    star2.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacion > 1.8 && puntuacion <= 2.2) {
     star1.setAttribute("class", "fa-solid fa-star");
     star2.setAttribute("class", "fa-solid fa-star");
-    star3.setAttribute("class", "fa-solid fa-solid fa-star-half-stroke-stroke");
-  } else if (puntuacion > 2.7 && puntuacion <= 3.2) {
+  } else if (puntuacion > 2.3 && puntuacion <= 2.7) {
     star1.setAttribute("class", "fa-solid fa-star");
     star2.setAttribute("class", "fa-solid fa-star");
-    star3.setAttribute("class", "fa-solid fa-star");
-  } else if (puntuacion > 3.2 && puntuacion <= 3.7) {
+    star3.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacion > 2.8 && puntuacion <= 3.2) {
     star1.setAttribute("class", "fa-solid fa-star");
     star2.setAttribute("class", "fa-solid fa-star");
     star3.setAttribute("class", "fa-solid fa-star");
-    star4.setAttribute("class", "fa-solid fa-solid fa-star-half-stroke-stroke");
-  } else if (puntuacion > 3.7 && puntuacion <= 4.2) {
+  } else if (puntuacion > 3.3 && puntuacion <= 3.7) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+    star4.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacion > 3.8 && puntuacion <= 4.2) {
     star1.setAttribute("class", "fa-solid fa-star");
     star2.setAttribute("class", "fa-solid fa-star");
     star3.setAttribute("class", "fa-solid fa-star");
     star4.setAttribute("class", "fa-solid fa-star");
-  } else if (puntuacion > 4.2) {
+  } else if (puntuacion > 4.3 && puntuacion <= 4.7) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+    star4.setAttribute("class", "fa-solid fa-star");
+    star5.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacion >= 4.8 && puntuacion <= 5) {
     star1.setAttribute("class", "fa-solid fa-star");
     star2.setAttribute("class", "fa-solid fa-star");
     star3.setAttribute("class", "fa-solid fa-star");
     star4.setAttribute("class", "fa-solid fa-star");
     star5.setAttribute("class", "fa-solid fa-star");
   }
-}); */
-const star1 = document.getElementById('star1');
-  const star2 = document.getElementById('star2');
-  const star3 = document.getElementById('star3');
-  const star4 = document.getElementById('star4');
-  const star5 = document.getElementById('star5');
 
-  document.querySelector('.box-estrellas').addEventListener("mouseover", (e) => {
-    const puntuacion = parseFloat(e.target.id.slice(-1)); // Obtener la puntuación del elemento afectado
+  puntuacionGuardada = puntuacion; // Guardar la puntuación actual
+});
 
-    // Remover todas las clases existentes
-    star1.setAttribute("class", "fa-regular fa-star");
-    star2.setAttribute("class", "fa-regular fa-star");
-    star3.setAttribute("class", "fa-regular fa-star");
-    star4.setAttribute("class", "fa-regular fa-star");
-    star5.setAttribute("class", "fa-regular fa-star");
+document.querySelector('.box-estrellas').addEventListener("mouseout", () => {
+  // Restaurar las estrellas a la puntuación guardada
+  if (puntuacionGuardada >= 0 && puntuacionGuardada <= 0.2) {
+    // No se establece ninguna estrella
+  } else if (puntuacionGuardada > 0.2 && puntuacionGuardada <= 0.7) {
+    star1.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacionGuardada > 0.8 && puntuacionGuardada <= 1.2) {
+    star1.setAttribute("class", "fa-solid fa-star");
+  } else if (puntuacionGuardada > 1.3 && puntuacionGuardada <= 1.7) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacionGuardada > 1.8 && puntuacionGuardada <= 2.2) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+  } else if (puntuacionGuardada > 2.3 && puntuacionGuardada <= 2.7) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacionGuardada > 2.8 && puntuacionGuardada <= 3.2) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+  } else if (puntuacionGuardada > 3.3 && puntuacionGuardada <= 3.7) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+    star4.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacionGuardada > 3.8 && puntuacionGuardada <= 4.2) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+    star4.setAttribute("class", "fa-solid fa-star");
+  } else if (puntuacionGuardada > 4.3 && puntuacionGuardada <= 4.7) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+    star4.setAttribute("class", "fa-solid fa-star");
+    star5.setAttribute("class", "fa-solid fa-star-half-alt");
+  } else if (puntuacionGuardada >= 4.8 && puntuacionGuardada <= 5) {
+    star1.setAttribute("class", "fa-solid fa-star");
+    star2.setAttribute("class", "fa-solid fa-star");
+    star3.setAttribute("class", "fa-solid fa-star");
+    star4.setAttribute("class", "fa-solid fa-star");
+    star5.setAttribute("class", "fa-solid fa-star");
+  }
+});
 
-    if (puntuacion >= 0 && puntuacion <= 0.2) {
-      // No se establece ninguna estrella
-    } else if (puntuacion > 0.2 && puntuacion <= 0.7) {
-      star1.setAttribute("class", "fa-solid fa-star-half-stroke");
-    } else if (puntuacion > 0.8 && puntuacion <= 1.2) {
-      star1.setAttribute("class", "fa-solid fa-star");
-    } else if (puntuacion > 1.3 && puntuacion <= 1.7) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star-half-stroke");
-    } else if (puntuacion > 1.8 && puntuacion <= 2.2) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-    } else if (puntuacion > 2.3 && puntuacion <= 2.7) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-      star3.setAttribute("class", "fa-solid fa-star-half-stroke");
-    } else if (puntuacion > 2.8 && puntuacion <= 3.2) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-      star3.setAttribute("class", "fa-solid fa-star");
-    } else if (puntuacion > 3.3 && puntuacion <= 3.7) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-      star3.setAttribute("class", "fa-solid fa-star");
-      star4.setAttribute("class", "fa-solid fa-star-half-stroke");
-    } else if (puntuacion > 3.8 && puntuacion <= 4.2) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-      star3.setAttribute("class", "fa-solid fa-star");
-      star4.setAttribute("class", "fa-solid fa-star");
-    } else if (puntuacion > 4.3 && puntuacion <= 4.7) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-      star3.setAttribute("class", "fa-solid fa-star");
-      star4.setAttribute("class", "fa-solid fa-star");
-      star5.setAttribute("class", "fa-solid fa-star");
-    }
-    else if (puntuacion >= 4.8 && puntuacion <= 5) {
-      star1.setAttribute("class", "fa-solid fa-star");
-      star2.setAttribute("class", "fa-solid fa-star");
-      star3.setAttribute("class", "fa-solid fa-star");
-      star4.setAttribute("class", "fa-solid fa-star");
-      star5.setAttribute("class", "fa-solid fa-star");
-      }
-  });
 
-/*   <i class="fa-solid fa-solid fa-star-half-stroke-stroke">Media estrella</i>  */
+/*   <i class="fa-solid fa-star-half-alt">Media estrella</i>  */
+/* <i class="fa-regular fa-star">Vacia estrella</i> */
+/* <i class="fa-solid fa-star">Llena estrella</i> */
+
+/*  */
+/* zoom */
+
+
+

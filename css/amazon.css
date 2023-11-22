@@ -5,7 +5,7 @@
     font-family: poppins;
 }
 header {
-    background-color: rgb(35,47,62); 
+    background-color: rgb(0, 69, 62); 
     width: 100%;
     height: 60px;
     display: grid;
@@ -159,7 +159,7 @@ border-radius: 12px;
     font-family: sans-serif;
     font-size: 0.9em;
     font-weight: 300;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(25, 88, 81);
   }
   
   .main-menu {
@@ -285,16 +285,16 @@ z-index: 20;
     display: flex;  
     justify-content: center;
     align-items: center;
-    overflow: hidden; /*  */
-}
+    /* overflow: hidden; */ /*  */
+}   
 .img-box {
     width: 100%;
     height: 100%;
-    transition: scale 400ms;
+    /* transition: scale 400ms; */
 }
 .img-box:hover {
     cursor: url(../img/busquedaLupa.png), auto;
-    scale: 110%;
+    /* scale: 110%; */
 }
 .main-img-modal {
     width: 30%;
@@ -315,7 +315,8 @@ z-index: 20;
 }
 .info-modal { /*  */
     grid-area: info-modal;
-    padding: 30px 60px 0 30px;   
+    padding: 30px 60px 0 30px; 
+    margin-top: 28px;  
 }
 .btn-close {
     position: absolute;
@@ -336,10 +337,10 @@ z-index: 20;
 .box-video-imagenes::before {
     content: "";
     display: block;
-    border-top: 2px solid rgb(185, 185, 185);
+    border-top: 3px solid rgb(224, 222, 222);
     width: 93%;
     position: absolute;
-    top: 28px;
+    top: 45px;
     margin: 0 10px 0 20px;
 }
 
@@ -352,20 +353,17 @@ z-index: 20;
 .option-videos {
     position: absolute;
     top: 10px;
-    left: 135px;
+    left: 35px;
 }
 .option-imagenes {
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 135px;
     
 }
 .option-selected {
-/*     position: absolute;
-    display: block;
-    top: 30px;
-    content: ""; */
-    border-bottom: 2px solid #eb9034;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgb(255, 143, 0);
 }
 .txt-caracteristicas-modal {
     font-size: 1.3em;
@@ -375,7 +373,6 @@ z-index: 20;
 .txt-estilos-caracteristicas {
     color: rgb(96, 96, 96);
     font-size: .9em;
-    padding-top: 20px;
 }
 /*  */
 .article {
@@ -394,7 +391,7 @@ z-index: 20;
 }
 .container-img {
     display: grid;
-    grid-template:  "empty-0        empty-0     empty-0     empty-0     empty-0" 40px
+    grid-template:  "empty-0        empty-0     empty-0     empty-0     empty-0" 20px
                     "article-1      empty-1     article-2   empty-2     article-3" 90px
                     "article-4      empty-1     article-5   empty-2     article-6" 90px /
                     90px            10px        90px        10px        90px
@@ -417,6 +414,9 @@ z-index: 20;
 .modalt.quitar-estilo {
     display: none;
 }
+.info-modal-box-img.quitar-estilo-modal {
+    display: block;
+}
 /*  */
 /*  */
 /*  */
@@ -429,28 +429,31 @@ z-index: 20;
     position: relative;
     display: grid;
     grid-template: "principal-container-img     principal-box-main-img-modal    principal-info-modal    principal-compra-modal"  /
-                    10px                        1fr                             400px                   300px;
+                    50px                        1fr                             500px                   300px;
  }
 .principal-container-img {
     grid-area: principal-container-img;
 }
 .principal-box-main-img-modal {
     grid-area: principal-box-main-img-modal;
-    width: 100%;
-    height: 120%;
-    display: flex;  
+    width: 110%;
+    display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+
+   /*  overflow: hidden; */
+    /* background-color: #C7511F; */
 }
 .img-box-principal {
     width: 100%;
     height: 100%;
-    transition: scale 400ms;
+    /* transition: scale 400ms; */
 }
 .img-box-principal:hover {
     cursor: url(../img/busquedaLupa.png), auto;
-    scale: 110%;
+    /* scale: 110%; */
 }
 
 .principal-info-modal {
@@ -553,9 +556,10 @@ z-index: 20;
     box-shadow: 10px 10px 60px rgb(255, 140, 0);
 }
 /*  */
-.principal-main-img-modal {
-    width: 60%;
+.principal-main-img-modal { /* tamaño de la imagen principal */
+    width: 80%;
     height: auto;
+    object-fit: contain; /* Esto mantendrá la proporción de la imagen sin distorsionarla */
 }
 .principal-article {
     border-radius: 10px;
@@ -608,9 +612,6 @@ z-index: 20;
     display: block;
     font-size: 14px;
   }
-/*   .fa-star, .fa-star-half-stroke{
-    color: #ffa600;
-  } */
   .star-select{
     border: none;
     font-size: 4px;
@@ -625,23 +626,48 @@ z-index: 20;
     text-decoration: underline;
     color: #C7511F;
   }
+  .sobre-este-articulo {
+    font-size: 1.3em;
+    font-weight: 700;
+  }
+  .txt-listas-modal {
+    line-height: 25px;
+    margin-top: 10px;
+  }
+  .txt-listas-modal li {
+    margin-bottom: 10px; /* Añade espacio entre los elementos de la lista */
+    list-style-type: disc; /* Agrega bolitas a los elementos de la lista */
+  }
+  .txt-principal-modal {
+    margin-top: 20px;
+  }
+  .txt-principal-modal ul {
+    list-style-type: disc; /* Agrega bolitas a los elementos de la lista */
+    margin-left: 20px; /* Añade un margen a la izquierda para dar espacio a las bolitas */
+  }
 
   /*  */
   /*  */
-.estrella {
-    /* color: rgb(0, 0, 0); */
+  .estrella {
+    color: rgb(233, 139, 45);
     font-size: 2em;
 }
 .box-estrellas {
     display: flex;
     flex-direction: row;
 }
-.fa-regular {
-    color: #75e4fc;
-}
-.fa-solid {
-    color: #244096;
-}
-.fa-star-half-stroke {
-    color: #565959;
-}
+/*  */
+
+
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+
+
