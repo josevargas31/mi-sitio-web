@@ -108,7 +108,7 @@ header {
 }
 .box-lupa {
     height: 42px;
-    background-color: rgb(254,189,105);
+    background-color: rgb(255,223,215);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     display: flex;
@@ -140,7 +140,7 @@ width: 100%;
 display: grid;
 grid-template: "box-filtro-todos box-buscar-amazon box-lupa" / 
                 70px             1fr                50px;
-border: 3px solid rgb(231, 153, 50);
+border: 3px solid rgb(252, 104, 170);
 border-radius: 12px;
 }
 
@@ -648,14 +648,15 @@ z-index: 20;
 
   /*  */
   /*  */
-  .estrella {
-    color: rgb(233, 139, 45);
-    font-size: 2em;
-}
-.box-estrellas {
+  .estrella{
+    color: rgb(255, 164, 28);
+    font-size: 0.9em;
+  }
+  .box-estrellas{
     display: flex;
     flex-direction: row;
-}
+    background-color: #75e4fc;
+  }
 /*  */
 
 
