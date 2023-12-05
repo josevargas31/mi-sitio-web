@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel';
+}
+
+.logo {
+    border-radius: 10px;
+    grid-area: logo;
+    background-color: goldenrod;
+    /*  width: 150px; */
+    height: 120px;
+}
+
+.main-menu {
+    grid-area: main-menu;
+    background-color: rgb(40, 167, 69);
+    /* width: 400px; */
+    height: 120px;
+}
+
+header {
+    margin-top: 20px;
+    width: 100%;
+    height: 120px;
+    gap: 20px;
+    display: grid;
+    grid-template: "logo      main-menu  " /
+        150px minmax(150px, 1fr);
+}
+
+.main-page {
+    grid-area: main-page;
+}
+
+body {
+    background-color: #f5f6f7;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template: "empty-left           main-page                   empty-right" /
+        minmax(50px, 1fr) minmax(200px, 1500px) minmax(50px, 1fr);
+
+}
+span {
+    font-size: 1.2em;
+    line-height: 1.5;
+    display: flex;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-content {
+    gap: 50px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    display: grid;
+    grid-template: "main-img       main-img      main-img "
+        "article-1      article-2      article-3"
+        "text-article-1 text-article-2   text-article-3"
+        "nuew-1          nuew-2             nuew-3"
+        "text-article-1-2 text-article-2-2 text-article-3-2";
+
+
+}
+
+.main-img {
+
+    grid-area: main-img;
+    background-color: darkcyan;
+    height: 600px;
+}
+
+.style-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    color: white;
+}
+
+/* articulos */
+.article {
+    border-radius: 10px;
+    height: 250px;
+    grid-area: article-1;
+    background-color: rgba(65, 31, 31, 0.7);
+}
+
+.article-1 {
+
+    border-radius: 10px;
+    grid-area: article-1;
+    background-color: rgb(64, 64, 64, .7);
+}
+
+.style-img {
+    display: flex;
+    margin-top: 110px;
+    justify-content: center;
+    font-size: 1.6em;
+    color: white;
+}
+
+.article-2 {
+    border-radius: 10px;
+    grid-area: article-2;
+    background-color: rgb(64, 64, 64, .7);
+}
+
+.article-3 {
+    border-radius: 10px;
+    grid-area: article-3;
+    background-color: rgb(64, 64, 64, .7);
+}
+
+.text-article-1 {
+    margin-top: 10px;
+    grid-area: text-article-1;
+}
+
+.text-article-2 {
+    margin-top: 10px;
+    grid-area: text-article-2;
+}
+
+.text-article-3 {
+    margin-top: 10px;
+    grid-area: text-article-3;
+}
+
+.nuew-1 {
+    margin-top: 10px;
+    grid-area: nuew-1;
+}
+
+.nuew-2 {
+    margin-top: 10px;
+    grid-area: nuew-2;
+}
+
+.nuew-3 {
+    margin-top: 10px;
+    grid-area: nuew-3;
+}
+
+.text-article-1-2 {
+    margin-top: 10px;
+    grid-area: text-article-1-2;
+}
+
+.text-article-2-2 {
+    margin-top: 10px;
+    grid-area: text-article-2-2;
+}
+
+.text-article-3-2 {
+    margin-top: 10px;
+    grid-area: text-article-3-2;
+}
+
+.img-article {
+    width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .main-content {
+        display: grid;
+        grid-template: "main-img  "
+            "article-1 "
+            "text-article-1 "
+            "article-2"
+            "text-article-2 "
+            "article-3"
+            "text-article-3"
+            "nuew-1 "
+            "text-article-1-2 "
+            "nuew-2"
+            "text-article-2-2"
+            "nuew-3"
+            "text-article-3-2";
+    }
+
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Cinzel';
+    font-style: normal;
+    font-weight: 50;
+    src: url('../fonts/cinzel-v19-latin-700.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/cinzel-v19-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/cinzel-v19-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/cinzel-v19-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/cinzel-v19-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/cinzel-v19-latin-700.svg#Cinzel') format('svg'); /* Legacy iOS */
+  }

@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.boto1 {
+    list-style: none; /* Para quitar el boton de inicio en los link */
+    display: inline-block; 
+    padding: 10px 20px; 
+    font-size: 14px; /* Se establece el tamaño de la fuente */
+    cursor: pointer; 
+    text-align: center; 
+    text-decoration: none; 
+    outline: none; 
+    color: rgb(225, 0, 0); /* El puento del boton */
+    background-color: rgb(169, 169, 169); /* Color del fondo del boton */
+    border: none; /* Se le hace un color de borde dependiendo de los siguientes datos, ej {2px solid red) se utilizaria sin las comillas */
+    border-radius: 15px;/* Cambia las esquinas rodondeandolo */
+ 
+    box-shadow: 0 9px rgb(105, 105, 105); /* Sombra del boton */
+    margin-right: 20px; /* separar los botones */
+}
+.lista { /* Para centar el boton */
+    font-size: 1.6em;
+    font-weight: 900;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 500px;
+}
+.bar-menu {
+    cursor: pointer;
+    position: fixed;
+    color: white;
+    font-size: 2.2em;
+    top: 15px;
+    right: 30px;
+    visibility: hidden;
+}
+.main-nav {
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    width: 100%;
+    background-color: rgba(212, 210, 210, 0.9);
+    height: 80px;
+}
+.main-menu {
+    list-style: none;  
+    text-align: right; 
+}
+.item-menu {
+    display: block;
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    font-size: 1.5em;
+}
+.item-main-menu {
+    height: 80px;
+    display: inline-block;
+    padding: 30px 45px;   
+}
+.item-main-menu:hover {
+    cursor: pointer;
+    background-color: rgba(71, 68, 68,.9);
+}
+
+
+@media only screen and (max-width:1152px) {
+
+    .main-menu {
+        margin-top: 81px;
+        display: none;
+
+    }
+    .main-menu-visible {
+        display: block;
+        background-color: rgb(96, 96, 96, .9);
+        margin-top: 80px;
+       
+        
+    }
+    .item-main-menu{
+        width: 100%;
+        display: block;
+        line-height: 70px;
+        text-align: center;
+        padding: 0;
+        border-bottom: 1px solid white;
+    }
+    .item-main-menu:hover{
+        background-color: rgba(71, 68, 68, 0.9);
+    }
+    .bar-menu {
+        visibility: visible;
+    }
+}

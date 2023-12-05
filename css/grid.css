@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.calendario{
+    width: 50%;
+    height: 100vh;
+    margin: 40px 25%;
+}
+.title{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: waltograph;
+    font-size: 3em;
+}
+.container{
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-gap: 20px;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns:  repeat(7, 120px);
+    grid-template-rows: minmax(50px, 70px) repeat(7, 75px);
+}
+/* minmax: ayuda a que un contenedor tenga un minimo y tambien para darle un maximo a un contenedor  */
+.item{
+    background-color: #ff8000;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    border-radius: 10%;
+}
+.day {
+    background-color: rgb(76, 210, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10%;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 400;
+    border-radius: 10%;
+}
+.box, .item {
+    background-color: rgb(242, 244, 235);
+    border-top: 1px rgb(225, 62, 62);
+    padding: 5px;
+}
+.box  p {
+    text-align: right;
+}
+.festivo {
+    background-color: rgb(225, 62, 62);
+    color: white;
+}
+@font-face {
+    font-family: waltograph;
+    src: url(../fonts/waltograph42.otf);
+}
+
