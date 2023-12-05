@@ -64,6 +64,7 @@ optionImagenes.addEventListener("click", function() {
   infoModal.style.display = "block";
 });
 /* Al pasar por encima de las estrellas aparecera calificaciones de las estrellas */
+<<<<<<< HEAD
 function mostrarTabla() {
   document.getElementById('tabla').style.display = 'block';
 }
@@ -72,6 +73,17 @@ function ocultarTabla() {
   document.getElementById('tabla').style.display = 'none';
 }
 
+=======
+let ocultEstrellas = document.getElementById("ocult-estrellas");
+optionVideos.addEventListener("", function() {
+  mainImgModal.style.display = "none";
+  infoModal.style.display = "none";                 /* Arreglar esto para que muestre calificaciones al pasar por encima de las estrellas */
+});
+optionImagenes.addEventListener("click", function() {
+  mainImgModal.style.display = "block";
+  infoModal.style.display = "block";
+});
+>>>>>>> 7618c2620018aef7e9b18ede59aeb4cd9f8aa71f
 /*  */
 /*  */
 /* Cuando haga click en el "" se ejucutara el siguiente funcion */
@@ -153,6 +165,10 @@ mainImgModal5.addEventListener("click", () => {
 });
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7618c2620018aef7e9b18ede59aeb4cd9f8aa71f
 /* -------------------------------------------------------------- */
 /* Alertas al darle click a unos botones */
 let comprarAhora = document.getElementById("comprarAhora");
@@ -194,13 +210,19 @@ containerImg.addEventListener('mouseover', (event) => {
 /*  */
 /*  */
 window.onload = () => {
+<<<<<<< HEAD
   let mostrarEstrellas = document.getElementById("mostrarEstrellas");
+=======
+>>>>>>> 7618c2620018aef7e9b18ede59aeb4cd9f8aa71f
   let modalt = document.getElementById('modalt');
   let mainImgModal111 = document.getElementById('mainImgModal111');
 
   // Al cargar la página, quitamos ciertos estilos del contenedor 1
   modalt.classList.add('quitar-estilo');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7618c2620018aef7e9b18ede59aeb4cd9f8aa71f
   
   // Agregamos un evento de clic al contenedor 2
   mainImgModal111.addEventListener('click', () => {
