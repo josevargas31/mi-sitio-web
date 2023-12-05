@@ -414,18 +414,12 @@ z-index: 20;
 .modalt.quitar-estilo {
     display: none;
 }
-<<<<<<< HEAD
 .mostrar-estrellas.quitar-estilo1 {
     display: none;
 }
 /* .info-modal-box-img.quitar-estilo-modal {
     display: block;
 } */
-=======
-.info-modal-box-img.quitar-estilo-modal {
-    display: block;
-}
->>>>>>> 7618c2620018aef7e9b18ede59aeb4cd9f8aa71f
 /*  */
 /*  */
 /*  */
@@ -700,12 +694,9 @@ z-index: 20;
     overflow: hidden;
     transition: width 1s;
   }
-<<<<<<< HEAD
   .tabla-calificaciones {
     display: none;
 }
-=======
->>>>>>> 7618c2620018aef7e9b18ede59aeb4cd9f8aa71f
 /*  */
 /*  */
 
