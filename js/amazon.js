@@ -62,6 +62,7 @@ optionImagenes.addEventListener("click", function() {
 /* Al pasar por encima de las estrellas aparecera calificaciones de las estrellas */
 function mostrarTabla() {
   document.getElementById('tabla').style.display = 'block';
+  document.getElementById('puntuaciones').style.display = 'none';
   actualizarBarras();
 }
 function ocultarTabla() {
