@@ -4,7 +4,7 @@ let mainBarco = document.getElementById("main-barco");
 let btnClose = document.getElementById("btnClose");
 let header = document.getElementById("header");
 
-/*  */
+
 let mainImgModal = document.getElementById("mainImgModal");
 
 let mainImgModal1 = document.getElementById("mainImgModal1");
@@ -19,27 +19,22 @@ let boxMainImgModal3 = document.getElementById("boxMainImgModal3");
 let boxMainImgModal4 = document.getElementById("boxMainImgModal4");
 let boxMainImgModal5 = document.getElementById("boxMainImgModal5");
 
-
-
+/* -------------------------------------------------------------- */
 /* Para el color de la barra de busqueda */
 headerSearchInput.addEventListener("click", function() {
-
     headerSearchInput.classList.add("header-search-input-focus");
     headerSearchInput.classList.remove("header-search-input-no-focus");
 });
 mainContent.addEventListener("click", () => {
-
     headerSearchInput.classList.add("header-search-input-no-focus");
     headerSearchInput.classList.remove("header-search-input-focus");
 });
-
+/* -------------------------------------------------------------- */
 /* sirve para ocultar una etiqueta HTML utilizando su ID */
 btnClose.addEventListener("click", function() {
     mainContent.style.display = "none";
 });
-
-
-
+/* -------------------------------------------------------------- */
 /* Color menú Imagenes Video */
 let optionVideos = document.getElementById("optionVideos");
 let optionImagenes = document.getElementById("optionImagenes");
@@ -52,7 +47,7 @@ optionImagenes.addEventListener("click", () => {
   optionImagenes.classList.add("option-selected");
   optionVideos.classList.remove("option-selected");
 });
-
+/* -------------------------------------------------------------- */
 /* Al darle click en videos desaparecera todo lo de imagenes y se diseversa */
 let infoModal = document.getElementById("info-modal");
 optionVideos.addEventListener("click", function() {
@@ -63,17 +58,17 @@ optionImagenes.addEventListener("click", function() {
   mainImgModal.style.display = "block";
   infoModal.style.display = "block";
 });
+/* -------------------------------------------------------------- */
 /* Al pasar por encima de las estrellas aparecera calificaciones de las estrellas */
 function mostrarTabla() {
   document.getElementById('tabla').style.display = 'block';
+  actualizarBarras();
 }
-
 function ocultarTabla() {
   document.getElementById('tabla').style.display = 'none';
+  recetearBarras()
 }
-
-/*  */
-/*  */
+/* -------------------------------------------------------------- */
 /* Cuando haga click en el "" se ejucutara el siguiente funcion */
 
 mainImgModal1.addEventListener("click", () => {
@@ -152,7 +147,6 @@ mainImgModal5.addEventListener("click", () => {
   mainImgModal5.classList.add("img-barcos-opa");
 });
 
-
 /* -------------------------------------------------------------- */
 /* Alertas al darle click a unos botones */
 let comprarAhora = document.getElementById("comprarAhora");
@@ -191,24 +185,25 @@ containerImg.addEventListener('mouseover', (event) => {
   }
 });
 
-/*  */
+/* -------------------------------------------------------------- */
 /*  */
 window.onload = () => {
-  let mostrarEstrellas = document.getElementById("mostrarEstrellas");
   let modalt = document.getElementById('modalt');
   let mainImgModal111 = document.getElementById('mainImgModal111');
+  let tabla = document.getElementById('tabla');
+ 
+  // Al cargar la página, ocultamos el el modal
+  modalt.style.display = "none";
+  tabla.style.display = "none";
 
-  // Al cargar la página, quitamos ciertos estilos del contenedor 1
-  modalt.classList.add('quitar-estilo');
-
-  
+ 
   // Agregamos un evento de clic al contenedor 2
   mainImgModal111.addEventListener('click', () => {
-      // Al hacer clic en el contenedor 2, volvemos a agregar los estilos al contenedor 1
-      modalt.classList.remove('quitar-estilo');
-  });
-}
-/*  */
+    // Al hacer clic en la pagina, mostramos el modal
+    modalt.style.display = "block";
+  }); 
+ }
+/* -------------------------------------------------------------- */
 /*  */
 let start1 = document.getElementById("start1")
 let start2 = document.getElementById("start2")
@@ -320,39 +315,73 @@ imageContainer.addEventListener('mousemove', (e) => {
 }); */
 /*  */
 /*  */
-let puntuacion5 = document.getElementById("puntuacion5");
-let puntuacion4 = document.getElementById("puntuacion4");
-let puntuacion3 = document.getElementById("puntuacion3");
-let puntuacion2 = document.getElementById("puntuacion2");
-let puntuacion1 = document.getElementById("puntuacion1");
+  let puntuacion5 = document.getElementById("puntuacion5");
+  let puntuacion4 = document.getElementById("puntuacion4");
+  let puntuacion3 = document.getElementById("puntuacion3");
+  let puntuacion2 = document.getElementById("puntuacion2");
+  let puntuacion1 = document.getElementById("puntuacion1");
 
-puntuacion5.innerHTML = "13";
-puntuacion4.innerHTML = "33";
-puntuacion3.innerHTML = "33";
-puntuacion2.innerHTML = "33";
-puntuacion1.innerHTML = "33";
+  puntuacion5.innerHTML = "13";
+  puntuacion4.innerHTML = "33";
+  puntuacion3.innerHTML = "33";
+  puntuacion2.innerHTML = "33";
+  puntuacion1.innerHTML = "33";
 
-let barra1Puntaje = document.getElementById("barra1Puntaje");
-let barra2Puntaje = document.getElementById("barra2Puntaje");
-let barra3Puntaje = document.getElementById("barra3Puntaje");
-let barra4Puntaje = document.getElementById("barra4Puntaje");
-let barra5Puntaje = document.getElementById("barra5Puntaje");
+  let barra1Puntaje = document.getElementById("barra1Puntaje");
+  let barra2Puntaje = document.getElementById("barra2Puntaje");
+  let barra3Puntaje = document.getElementById("barra3Puntaje");
+  let barra4Puntaje = document.getElementById("barra4Puntaje");
+  let barra5Puntaje = document.getElementById("barra5Puntaje");
 
-let buttonGraficar = document.getElementById("buttonGraficar");
+  let buttonGraficar = document.getElementById("buttonGraficar");
 
-buttonGraficar.addEventListener("click", function () {
-  // Calcula el total de votantes
-  let totalVotantes =
-    parseInt(puntuacion5.innerHTML) +
-    parseInt(puntuacion4.innerHTML) +
-    parseInt(puntuacion3.innerHTML) +
-    parseInt(puntuacion2.innerHTML) +
-    parseInt(puntuacion1.innerHTML);
+  function actualizarBarras() {
+    // Calcula el total de votantes
+    let totalVotantes =
+        parseInt(puntuacion5.innerHTML) +
+        parseInt(puntuacion4.innerHTML) +
+        parseInt(puntuacion3.innerHTML) +
+        parseInt(puntuacion2.innerHTML) +
+        parseInt(puntuacion1.innerHTML);
 
-  // Calcula el porcentaje y actualiza la barra para cada puntuación
-  barra1Puntaje.style.width = (parseInt(puntuacion5.innerHTML) * 2) + "px";
-  barra2Puntaje.style.width = (parseInt(puntuacion4.innerHTML) * 2) + "px";
-  barra3Puntaje.style.width = (parseInt(puntuacion3.innerHTML) * 2) + "px";
-  barra4Puntaje.style.width = (parseInt(puntuacion2.innerHTML) * 2) + "px";
-  barra5Puntaje.style.width = (parseInt(puntuacion1.innerHTML) * 2) + "px";
-});
+    // Calcula el porcentaje y actualiza la barra para cada puntuación
+    barra1Puntaje.style.width = (parseInt(puntuacion5.innerHTML) * 2) + "px";
+    barra2Puntaje.style.width = (parseInt(puntuacion4.innerHTML) * 2) + "px";
+    barra3Puntaje.style.width = (parseInt(puntuacion3.innerHTML) * 2) + "px";
+    barra4Puntaje.style.width = (parseInt(puntuacion2.innerHTML) * 2) + "px";
+    barra5Puntaje.style.width = (parseInt(puntuacion1.innerHTML) * 2) + "px";
+}
+function recetearBarras() {
+  // Almacena los valores iniciales de las puntuaciones en variables
+  let inicialPuntuacion5 = "13";
+  let inicialPuntuacion4 = "33";
+  let inicialPuntuacion3 = "33";
+  let inicialPuntuacion2 = "33";
+  let inicialPuntuacion1 = "33";
+
+  // Restablece las puntuaciones a sus valores iniciales
+  puntuacion5.innerHTML = inicialPuntuacion5;
+  puntuacion4.innerHTML = inicialPuntuacion4;
+  puntuacion3.innerHTML = inicialPuntuacion3;
+  puntuacion2.innerHTML = inicialPuntuacion2;
+  puntuacion1.innerHTML = inicialPuntuacion1;
+
+  // Restablece las barras a su ancho inicial usando los valores iniciales
+  barra1Puntaje.style.width = (parseInt(inicialPuntuacion5) * 2) + "px";
+  barra2Puntaje.style.width = (parseInt(inicialPuntuacion4) * 2) + "px";
+  barra3Puntaje.style.width = (parseInt(inicialPuntuacion3) * 2) + "px";
+  barra4Puntaje.style.width = (parseInt(inicialPuntuacion2) * 2) + "px";
+  barra5Puntaje.style.width = (parseInt(inicialPuntuacion1) * 2) + "px";
+}
+
+function actualizarBarras() {
+  // Muestra la tabla y actualiza las barras automáticamente
+    mostrarTabla();
+}
+
+/* -------------------------------------------------------------- */
+/*  */
+
+/* window.onload = () => {
+
+} */
